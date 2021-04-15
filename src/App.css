@@ -1,75 +1,96 @@
-/* .App {
+body {
+  font-family: 'Lucida Sans Unicode';
+}
+
+h1 {
   text-align: center;
+  font-size: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table {
+  margin: 0 auto;
+  border-spacing: 0px 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button {
+  background-color: #303030;
+  color: #50C8FF;
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  background-color: #50C8FF;
+  color: #303030;
+  transition: background-color 0.5s, color 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.cell {
+  height: 70px;
+  width: 70px;
+  background-color: #1990ff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
-.board { 
-  border:1px solid black; 
-  display:flex; 
-  flex-wrap:wrap; 
-  height:276px; 
-  width:330px; 
-  background:blue 
-  } 
-  .board div { 
-  height:40px; 
-  width:40px; 
-  margin:3px;
-  border-radius:20px 
-  }
-  .square{ 
-  background:white; 
-  } 
-  
-  .player-one { 
-  background:red;
-  }
-  .player-two { 
-  background:yellow; 
-  }
-  .restart{ 
-  background: red; 
-  width: 200px; 
-  height: 200px; 
-  position: fixed; 
-  top: 100px; 
-  left: 100px; 
-  display: none; 
-  justify-content: center; 
-  align-items: center; 
-  flex-direction: column; 
-  }
+.circle {
+  height: 15px;
+  width: 15px;
+  border: 1px solid #000;
+  border-radius: 100px;
+}
+
+.circles {
+  margin: -40px 0 25px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.red-sm {
+  background-color: red;
+}
+
+.yellow-sm {
+  background-color: yellow;
+}
+
+.message {
+  text-align: center;
+  font-size: 17px;
+}
+
+.white {
+  height: 60px;
+  width: 60px;
+  background-color: #FFF;
+  border-radius: 100px;
+}
+
+.red {
+  height: 60px;
+  width: 60px;
+  background-color: red;
+  border-radius: 100px;
+  transition: background-color 0.5s;
+}
+
+.yellow {
+  height: 60px;
+  width: 60px;
+  background-color: yellow;
+  border-radius: 100px;
+  transition: background-color 0.5s;
+}

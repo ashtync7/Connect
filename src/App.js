@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import ReactDOM from 'react-dom';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './App.css';
+import { Row, Cell} from "./helpers"
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
     message: ''
   });
   // bind the play function to game
-  game.play = game.play.bind(game);
+  game.play = game.play
   const initBoard = () => {
     let board = [];
     for (let r = 0; r < 6; r++) {
@@ -23,7 +24,7 @@ function App() {
       for (let c = 0; c < 7; c++) { row.push(null) }
       board.push(row)
     }
-    this.setState({
+    setGame({
       board,
       currentPlayer: game.state.player1,
       gameOver: false,
@@ -47,7 +48,7 @@ function App() {
 
       let result = game.checkAll(board);
       if (result === game.state.player1) {
-        game.setState({ board, gameOver: true, message: 'Player 1 (red) wins!' });
+        setGame({ board, gameOver: true, message: 'Player 1 (red) wins!' });
       } else if (result === game.state.player2) {
         this.setState({ board, gameOver: true, message: 'Player 2 (yellow) wins!' });
       } else if (result === 'draw') {
@@ -137,11 +138,29 @@ function App() {
   }
 
 
+    // componentWillMount() {
+    //   game.initBoard();
+    // }
+
 
   return (
-    <div class="container">
-    </div>
+    <div>
+    <div className="button" onClick={() => {initBoard(game)}}>New Game</div>
+    
+    <table>
+      <thead>
+      </thead>
+      <tbody>
+        {game.board.map((row, i) => (<Row key={i} row={Row.row} play={game.play} />))}
+      </tbody>
+    </table>
+    
+    <p className="message">{game.message}</p>
+  </div>
   );
+  // Row component
+
+
 }
 
 export default App;

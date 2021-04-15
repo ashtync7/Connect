@@ -22,31 +22,19 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>React App</title>
-</head>
-
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-</body>
-
-<div class="container">
-  <div class="currentPlayer">The current player is
-    <span class="player"></span>
-    <div class="board"></div>
-    <div class="restart">
-      <button class="playAgain">play again</button>
+  <div>
+    <h1 class="animated fadeInRightBig">Connect 4</h1>
+    <div class="circles">
+      <div class="circle red-sm"></div>
+      <div class="circle yellow-sm"></div>
+      <div class="circle red-sm"></div>
+      <div class="circle yellow-sm"></div>
+      <div class="circle red-sm"></div>
+      <div class="circle yellow-sm"></div>
+      <div class="circle red-sm"></div>
+      <div class="circle yellow-sm"></div>
     </div>
+    <div id="main"></div>
   </div>
 
 </html>

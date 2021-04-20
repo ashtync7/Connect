@@ -136,6 +136,24 @@ function App() {
     return game.checkVertical(board) || game.checkDiagonalRight(board) || game.checkDiagonalLeft(board) || game.checkHorizontal(board) || game.checkDraw(board);
   }
 
+  const render = () => {
+    return (
+      <div>
+        <div className="button" onClick={() => { game.initBoard() }}>New Game</div>
+
+        <table>
+          <thead>
+          </thead>
+          <tbody>
+            {game.state.board.map((row, i) => (<Row key={i} row={row} play={this.play} />))}
+          </tbody>
+        </table>
+
+        <p className="message">{game.state.message}</p>
+      </div>
+    )
+  }
+
 
 
   return (

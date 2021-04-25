@@ -87,20 +87,12 @@ table {
   transition: background-color 0.5s;
 }
 
-<<<<<<< HEAD
-=======
-body {
-  font-family: 'Lucida Sans Unicode';
-}
-
-h1 {
-  text-align: center;
-  font-size: 50px;
-}
-
-table {
-  margin: 0 auto;
-  border-spacing: 0px 0px;
+.yellow {
+  height: 60px;
+  width: 60px;
+  background-color: yellow;
+  border-radius: 100px;
+  transition: background-color 0.5s;
 }
 
 .button {
@@ -156,33 +148,4 @@ table {
 
 .yellow-sm {
   background-color: yellow;
-}
-
-.message {
-  text-align: center;
-  font-size: 17px;
-}
-
-.white {
-  height: 60px;
-  width: 60px;
-  background-color: #FFF;
-  border-radius: 100px;
-}
-
-.red {
-  height: 60px;
-  width: 60px;
-  background-color: red;
-  border-radius: 100px;
-  transition: background-color 0.5s;
-}
-
->>>>>>> 92e60d673e7747cbd59da73233ca38dbd1e56341
-.yellow {
-  height: 60px;
-  width: 60px;
-  background-color: yellow;
-  border-radius: 100px;
-  transition: background-color 0.5s;
 }

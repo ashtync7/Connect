@@ -136,7 +136,7 @@ function App() {
     return game.checkVertical(board) || game.checkDiagonalRight(board) || game.checkDiagonalLeft(board) || game.checkHorizontal(board) || game.checkDraw(board);
   }
 
-  componentWillMount() {
+  const componentWillMount = () => {
     this.initBoard();
   }
 
